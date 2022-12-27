@@ -36,7 +36,7 @@ namespace ECommerce.Api.Customers.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, IEnumerable<CustomerDto> customers, string errorMsg)> GetCustomersAsync()
+        public async Task<(bool IsSuccess, IEnumerable<CustomerDto>? customers, string? errorMsg)> GetCustomersAsync()
         {
             try
             {
@@ -57,7 +57,7 @@ namespace ECommerce.Api.Customers.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, CustomerDto customer, string errorMsg)> GetCustomerAsync(int id)
+        public async Task<(bool IsSuccess, CustomerDto? customer, string? errorMsg)> GetCustomerAsync(int id)
         {
             try
             {

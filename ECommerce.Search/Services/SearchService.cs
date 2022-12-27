@@ -15,13 +15,13 @@ namespace ECommerce.Search.Services
             this.customersService = customersService;
         }
 
-        async Task<(bool IsSuccess, dynamic SearchResults)> ISearchService.SearchAsync(int customerId)
+        async Task<(bool IsSuccess, dynamic? SearchResults)> ISearchService.SearchAsync(int customerId)
         {
             var ordersResult = await ordersService.GetOrdersAsync(customerId);
             var productsResult = await productsService.GetProductsAsync();
             var customersResult = await customersService.GetCustomerAsync(customerId);
 
-            if(ordersResult.IsSuccess)
+            if(ordersResult.IsSuccess && ordersResult.Orders != null)
             {
                 foreach(var order in ordersResult.Orders)
                 {

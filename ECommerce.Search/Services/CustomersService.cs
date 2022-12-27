@@ -15,7 +15,7 @@ namespace ECommerce.Search.Services
             this.logger = logger;
         }
 
-        async Task<(bool IsSuccess, dynamic Customer, string ErrorMsg)> ICustomersService.GetCustomerAsync(int id)
+        async Task<(bool IsSuccess, dynamic? Customer, string? ErrorMsg)> ICustomersService.GetCustomerAsync(int id)
         {
             try
             {

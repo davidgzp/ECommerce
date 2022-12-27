@@ -77,7 +77,7 @@ namespace ECommerce.Api.Orders.Providers
         }
 
 
-        public async Task<(bool IsSuccess, IEnumerable<OrderDto> Orders, string errorMsg)> GetOrdersAsync(int customerId)
+        public async Task<(bool IsSuccess, IEnumerable<OrderDto>? Orders, string? errorMsg)> GetOrdersAsync(int customerId)
         {
             try
             {

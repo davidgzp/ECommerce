@@ -34,7 +34,7 @@ namespace ECommerce.Api.Products.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, IEnumerable<Models.ProductDto> Products, string ErrorMessage)> GetProductsAsync()
+        public async Task<(bool IsSuccess, IEnumerable<Models.ProductDto>? Products, string? ErrorMessage)> GetProductsAsync()
         {
             try
             {
@@ -55,7 +55,7 @@ namespace ECommerce.Api.Products.Providers
             }
         }
 
-        public async Task<(bool IsSuccess, Models.ProductDto product, string ErrorMessage)> GetProductAsync(int id)
+        public async Task<(bool IsSuccess, Models.ProductDto? product, string? ErrorMessage)> GetProductAsync(int id)
         {
             try
             {

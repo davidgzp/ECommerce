@@ -15,7 +15,7 @@ namespace ECommerce.Search.Services
             this.logger = logger;   
         }
 
-        async Task<(bool IsSuccess, IEnumerable<Product> Products, string errorMsg)> IProductsService.GetProductsAsync()
+        async Task<(bool IsSuccess, IEnumerable<Product>? Products, string? errorMsg)> IProductsService.GetProductsAsync()
         {
             try
             {
