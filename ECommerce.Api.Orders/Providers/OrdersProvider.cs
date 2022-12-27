@@ -9,7 +9,6 @@ namespace ECommerce.Api.Orders.Providers
 {
     public class OrdersProvider : IOrdersProvider
     {
-        // just for test 2
         private readonly OrdersDbContext dbContext;
 
         private readonly ILogger<OrdersProvider> logger;
